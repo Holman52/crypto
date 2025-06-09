@@ -1,15 +1,17 @@
 import React from "react"
+import Input from "./other/Input"
+import './Form.css'
 
 function Form() {
     return(
-            <div>
-                <div>
-                    <Input></Input>
-                    <Select/>
+            <div className="form-client">
+                <div className="form-client__input">
+                    <Input type='number' placeholder='Введите количетво валюты' min="1" ></Input>
+                    {/* <Select/> */}
                 </div>
-                <div>
-                    <Input></Input>
-                    <Select/>
+                <div className="form-client__output">
+                    <Input ></Input>
+                    {/* <Select/> */}
                 </div>
             </div>
         )
