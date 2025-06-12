@@ -1,10 +1,11 @@
+
 export const DEFAULT_BASE_VALUE = 1;
 export const DEFAULT_TARGET_VALUE = 0;
 export const DEFAULT_TO_FIXED = 2;
 export const DEFAULT_BASE_CODE = "USD";
 export const DEFAULT_TARGET_CODE = "RUB";
 
-export const CODES = [
+ const CODES = [
   {
     value: "AED",
     label: "UAE Dirham",
@@ -650,3 +651,4 @@ export const CODES = [
     label: "Zimbabwean Dollar",
   },
 ];
+export default CODES
