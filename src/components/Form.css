@@ -5,3 +5,19 @@
     gap: 20px;
     width: 100%;
 }
+.form-client__flex{
+        display: flex;
+        justify-content: space-between;
+}
+.kurs{
+  box-shadow: 0 5px 15px 0 rgba(11, 99, 246, 1);
+  transition: 0.5s;
+  border: none;
+  border-radius: 20px;
+  margin-left: 8%
+}
+
+.kurs:hover {
+  transform: translate(0,-3px);
+  box-shadow: 0 10px 20px 0 rgba(11, 99, 246, 1);
+}
