@@ -11,19 +11,13 @@ function useConvertRate({baseCode, targetCode}){
         try{
             setIsLoading(true)
             const res = await fetch(
-                `${import.meta.env.VITE_EXCHANGE_RATE_API_URL}/${
-            import.meta.env.VITE_EXCHANGE_RATE_API_KEY
-          }/pair/${baseCode}/${targetCode}`
+                `${import.meta.env.VITE_API_URL}/${import.meta.env.VITE_API_KEY}/pair/${baseCode}/${targetCode}`
             )
-            console.log(res)
             const data = await res.json()
-            console.log(data)
             setConvertRate(data.conversion_rate)
-            console.log(data.conversion_rate)
         }
         catch(error){
             setError(error.message)
-            console.log(error.message)
         }
         finally{
             setIsLoading(false)
@@ -36,12 +30,15 @@ function useConvertRate({baseCode, targetCode}){
         getConvertRate()
     }, [getConvertRate])
 
+    console.log(convertRate)
+
     return(
-        convertRate,
+        {convertRate,
         isLoading,
         error,
-        clearError
+        clearError}
     )
+    
 }
 
 export default useConvertRate
