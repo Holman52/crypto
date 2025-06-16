@@ -8,14 +8,14 @@ function Form(
     return(
             <div className="form-client">
                 <div className="form-client__flex">
-                    <Input  placeholder='Введите количетво валюты'  onChange={onValueInput} value={ValueInput}></Input>
+                    <Input value={ValueInput} onChange={onValueInput} placeholder='Введите количетво валюты' ></Input>
                     <Select onChange={BaseCodeHandler} value={baseCode}/>
                 </div>
                 <div className="form-client__flex">
-                    <Input value={targetValue} readOnly></Input>
+                    <Input value={targetValue} readOnly={true}></Input>
                     <Select onChange={TargetCodeHandle} value={targetCode}/>
                 </div>
-                <Button className='kurs'>Посмотреть курс</Button>
+                {/* <Button className='kurs'>Посмотреть курс</Button> */}
             </div>
         )
     }

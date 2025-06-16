@@ -6,7 +6,7 @@ import useConvertRate from "../utils/useConvertRate";
 
 function Convert() {
 
-    const [valueInput, setValueInput] = useState(4)
+    const [valueInput, setValueInput] = useState(DEFAULT_BASE_VALUE)
     const [baseCode,setBaseCode] = useState(DEFAULT_BASE_CODE)
     const [targetCode, setTargetCode] = useState(DEFAULT_TARGET_CODE)
     const [targetValue, setTargetValue] = useState(0)
@@ -16,8 +16,9 @@ function Convert() {
         targetCode
     })
      useEffect(() => {
+
     if (valueInput && convertRate) {
-      const result = Number((valueInput * convertRate).toFixed(2));
+      const result = (valueInput * convertRate).toFixed(2);
       setTargetValue(result);
     } else {
       setTargetValue(0);
@@ -25,9 +26,8 @@ function Convert() {
   }, [valueInput, convertRate]);
 
   const onValueInputChange = (e) => {
-    e.preventDefault()
-    const value = Number(e.target.value);
-    setValueInput(value || 0);
+    const value = e.target.value;
+    setValueInput(value);
   };
     const onBaseCodeHandler = (e) =>{
         setBaseCode(e.target.value)

@@ -5,12 +5,11 @@ function Input(props) {
     
     return(
         <input
-            type={props.type}
-            disabled={props.disabled}
+            type='number'
             value={props.value}
-            min={props.min}
             placeholder={props.placeholder}
             className={`${"input"} ${props.className}`}
+            onChange={props.onChange}
         >
 
         </input>
