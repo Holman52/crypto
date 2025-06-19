@@ -18,5 +18,5 @@ function Select(props) {
       </select>
   )
 }
-
+// вуфув
 export default Select
